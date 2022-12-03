@@ -1,0 +1,127 @@
+!! special
+!*.foreground:   #f8f8f2
+!*.background:   #272822
+!*.cursorColor:  #f8f8f2
+!
+!! black
+!*.color0:       #272822
+!*.color8:       #75715e
+!
+!! red
+!*.color1:       #f92672
+!*.color9:       #f92672
+!
+!! green
+!*.color2:       #a6e22e
+!*.color10:      #a6e22e
+!
+!! yellow
+!*.color3:       #f4bf75
+!*.color11:      #f4bf75
+!
+!! blue
+!*.color4:       #66d9ef
+!*.color12:      #66d9ef
+!
+!! magenta
+!*.color5:       #ae81ff
+!*.color13:      #ae81ff
+!
+!! cyan
+!*.color6:       #a1efe4
+!*.color14:      #a1efe4
+!
+!! white
+!*.color7:       #f8f8f2
+!*.color15:      #f9f8f5
+
+! special
+*.foreground:   #b2a191
+*.background:   #171717
+*.cursorColor:  #b2a191
+
+! black
+*.color0:       #202020
+*.color8:       #404040
+
+! red
+*.color1:       #bf3f34
+*.color9:       #ff6c5f
+
+! green
+*.color2:       #707d22
+*.color10:      #b8ca4b
+
+! yellow
+*.color3:       #bf7a29
+*.color11:      #c7a551
+
+! blue
+*.color4:       #627a92
+*.color12:      #95b9de
+
+! magenta
+*.color5:       #75507b
+*.color13:      #ad7fa8
+
+! cyan
+*.color6:       #757978
+*.color14:      #9fa590
+
+! white
+*.color7:       #b2a191
+*.color15:      #e8d0c3
+
+!! special
+!*.foreground:   #ababab
+!*.background:   #000000
+!*.cursorColor:  #ababab
+!
+!! black
+!*.color0:       #000000
+!*.color8:       #343434
+!
+!! red
+!*.color1:       #e92f2f
+!*.color9:       #e92f2f
+!
+!! green
+!*.color2:       #0ed839
+!*.color10:      #0ed839
+!
+!! yellow
+!*.color3:       #dddd13
+!*.color11:      #dddd13
+!
+!! blue
+!*.color4:       #3b48e3
+!*.color12:      #3b48e3
+!
+!! magenta
+!*.color5:       #f996e2
+!*.color13:      #f996e2
+!
+!! cyan
+!*.color6:       #23edda
+!*.color14:      #23edda
+!
+!! white
+!*.color7:       #ababab
+!*.color15:      #f9f9f9
+
+
+
+URxvt.scrollBar: false
+URxvt.font: xft:Roboto Mono for Powerline:size=10, \
+            xft:NotoSansMono Nerd Font:style=Regular:size=5
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+!URxvt.perl-ext-common: default,matcher
+!URxvt.urlLauncher: firefox
+URxvt.transparent: true
+URxvt.shading: 10
+URxvt.keysym.Control-0x2b: perl:font-size:increase
+URxvt.keysym.Control-0x2d: perl:font-size:decrease
+URxvt*skipBuiltinGlyphs: true
