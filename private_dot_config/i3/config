@@ -56,7 +56,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id rofi -show combi
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -190,14 +190,15 @@ bindsym $mod+r mode "resize"
 #        status_command i3status
 #}
 
-exec --no-startup-id "polybar"
+exec_always --no-startup-id "pkill polybar"
+exec_always --no-startup-id "sleep 1 && polybar"
 exec_always --no-startup-id "setxkbmap -layout latam"
-exec_always --no-startup-id "feh --bg-fill --randomize /home/chen/Pictures/Wallpapers/"
 exec --no-startup-id "picom -b --config $HOME/.config/picom/picom.conf"
+exec_always --no-startup-id "feh --bg-fill --randomize ~/Pictures/Wallpapers/landscape/* --bg-fill --randomize ~/Pictures/Wallpapers/portrait/*"
 
 default_border pixel 0
 #smart_gaps on
 gaps inner 7
 
 bindsym $mod+Shift+s exec /usr/bin/flameshot gui
-bindsym $mod+e exec . ranger
+bindsym F1 rofi -show find -modi find:~/.local/share/rofi/finder.sh

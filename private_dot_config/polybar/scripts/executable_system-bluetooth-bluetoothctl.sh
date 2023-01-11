@@ -58,3 +58,4 @@ case "$1" in
         bluetooth_print
         ;;
 esac
+exit 0

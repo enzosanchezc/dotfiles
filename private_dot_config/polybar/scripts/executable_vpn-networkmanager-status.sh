@@ -7,3 +7,5 @@ if [ -n "$vpn" ]; then
 else
 	echo "VPN DOWN"
 fi
+
+exit 0
