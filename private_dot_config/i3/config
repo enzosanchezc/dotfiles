@@ -201,4 +201,4 @@ default_border pixel 0
 gaps inner 7
 
 bindsym $mod+Shift+s exec /usr/bin/flameshot gui
-bindsym F1 rofi -show find -modi find:~/.local/share/rofi/finder.sh
+bindsym $mod+F1 exec rofi -show find -modi find:~/.local/share/rofi/finder.sh
