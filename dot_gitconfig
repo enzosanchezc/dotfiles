@@ -6,3 +6,5 @@
 	defaultBranch = main
 [gpg]
 	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = ~/.config/git/allowed-signers
