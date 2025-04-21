@@ -1,0 +1,43 @@
+# Oh my zsh and plugins
+export ZSH="$HOME/.oh-my-zsh"
+export ZSH_THEME="spaceship"
+export SPACESHIP_CONFIG="$HOME/.config/spaceship.zsh"
+plugins=(git zsh-syntax-highlighting)
+source $ZSH/oh-my-zsh.sh
+
+# Editor
+export EDITOR=/usr/bin/vim
+
+# Kubectl
+source <(kubectl completion zsh)
+alias kubectl=kubecolor
+alias k=kubectl
+alias kgp='kubectl get pods'
+alias kdp='kubectl describe pods'
+alias kgn='kubectl get nodes'
+alias kgs='kubectl get services'
+
+# Kubecolor
+compdef kubecolor=kubectl
+
+# Krew
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+# Terraform
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform
+alias tf=terraform
+
+# Kubeswitch
+source <(switcher init zsh)
+source <(alias s=switch)
+source <(compdef _switcher switch)
+
+# Golang
+export GOPATH="$HOME/go"
+
+# Clusterctl
+source <(clusterctl completion zsh)
+
+# Bitwarden SSH Agent
+export SSH_AUTH_SOCK="$HOME/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock"
