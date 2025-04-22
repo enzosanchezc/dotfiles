@@ -13,4 +13,4 @@ lines = 30
 size = 13.0
 
 [general]
-import = ["/home/chen/.config/alacritty/themes/themes/carbonfox.toml"]
+import = ["/home/enzo/.config/alacritty/themes/themes/carbonfox.toml"]
