@@ -10,15 +10,11 @@ export EDITOR=/usr/bin/vim
 
 # Kubectl
 source <(kubectl completion zsh)
-alias kubectl=kubecolor
 alias k=kubectl
 alias kgp='kubectl get pods'
 alias kdp='kubectl describe pods'
 alias kgn='kubectl get nodes'
 alias kgs='kubectl get services'
-
-# Kubecolor
-compdef kubecolor=kubectl
 
 # Krew
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
@@ -40,4 +36,8 @@ export GOPATH="$HOME/go"
 source <(clusterctl completion zsh)
 
 # Bitwarden SSH Agent
-export SSH_AUTH_SOCK="$HOME/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock"
+if [ -e "$HOME/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock" ]; then
+    export SSH_AUTH_SOCK="$HOME/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock"
+else
+    export SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock"
+fi
