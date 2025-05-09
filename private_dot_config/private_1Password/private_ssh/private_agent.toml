@@ -1,0 +1,11 @@
+#  https://developer.1password.com/docs/ssh/agent/config
+
+# Encryption key
+[[ssh-keys]]
+vault = "Personal"
+item = "SSH Encryption Key"
+
+# Signing Key
+[[ssh-keys]]
+vault = "Personal"
+item = "SSH Signing Key"

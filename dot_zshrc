@@ -39,11 +39,9 @@ export GOPATH="$HOME/go"
 # Clusterctl
 source <(clusterctl completion zsh)
 
-# Bitwarden SSH Agent
-if [ -e "$HOME/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock" ]; then
-    export SSH_AUTH_SOCK="$HOME/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock"
-else
-    export SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock"
+# 1Password SSH Agent
+if [ -e "$HOME/.1password/agent.sock" ]; then
+    export SSH_AUTH_SOCK="$HOME/.1password/agent.sock"
 fi
 
 # Work environment

@@ -8,3 +8,6 @@
 	format = ssh
 [gpg "ssh"]
 	allowedSignersFile = ~/.config/git/allowed-signers
+	program = "/opt/1Password/op-ssh-sign"
+[commit]
+	gpgsign = true
